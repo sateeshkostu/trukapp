@@ -1,0 +1,50 @@
+/* .sidenav{
+    background-color: #F58E26;
+    height: 100vh;
+    padding: 15px 20px;
+    margin-top: 50px;
+} */
+
+.topnav{
+    background-color: #F58E26;
+    height: 90px;
+    /* margin-left: 63px; */
+}
+
+/* .side{
+    padding-top: 40px;
+} */
+/* .mysidenav{
+    width: 50px;
+    font-size: 30px;
+} */
+/* .side .sidenav .NavItem {
+    color: black;
+    background-color: #FFF;
+} */
+
+.NavItem{
+    padding-bottom: 30px;
+}
+.bars{
+    background-color: orange;
+    height: 80px;
+    padding: 15px 20px; 
+}
+
+.page{
+    text-align: center;
+    font-size: 5rem;
+    margin-left: 50px;
+    
+}
+
+/* .mysidenav .sidenav a {
+    color: black;
+    background-color: transparent;
+  }
+  
+  .mysidenav .sidenav a.active {
+    color: black;
+    background-color: white;
+  } */
