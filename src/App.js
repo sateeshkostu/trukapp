@@ -15,6 +15,7 @@ import Communications from './pages/Communications';
 import Support from './pages/Support';
 import LoginForm from './comonents/LoginForm';
 import Maybeshownavbar from './comonents/Maybeshownavbar/Maybeshownavbar';
+import Privateroute from './comonents/Privateroute';
 
 
 function App() {
@@ -28,12 +29,12 @@ function App() {
       <BrowserRouter>
         {/* { isLoggedIn ? <MySidenav /> : null} */}
         <Maybeshownavbar>
-        <MySidenav />
+        <MySidenav /> 
         </Maybeshownavbar>
         <Routes>
           <Route path='/login' element={<LoginForm />  } />
           <Route path="/" element={<Dashboard />} />
-          <Route path="/postedloads" element={<Postedloads />} />
+          <Privateroute path="/postedloads" component={Postedloads } />
           <Route path="/cancledbookings" element={<Cancledbookings />} />
           <Route path="/trukcompines" element={<Trukcompines />} />
           <Route path="/completeddeals" element={<Completedloads />} />

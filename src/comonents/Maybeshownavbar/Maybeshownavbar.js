@@ -4,15 +4,15 @@ import { useLocation } from "react-router-dom";
 
 const Maybeshownavbar = ({children}) =>{  //you export the children prop in app.js
 
-    const location = useLocation()
+    const location = useLocation()  //uselocation is import from react router dom
     const [showbar, setshowbar] = useState(false)
 
     useEffect(() => {
         console.log('this is location:', location)
-        if (location.pathname === '/login') {
-            setshowbar(false)  //here 
+        if (location.pathname === '/login') {  //showbar is false show the loginform
+            setshowbar(false)  
         } else{
-            setshowbar(true)
+            setshowbar(true)  //show bar is true it navigate to mysidenav
         }
     },[location])
     return(

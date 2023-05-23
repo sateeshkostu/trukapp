@@ -47,7 +47,7 @@ const LoginForm = (props) => {
         <>
             <div className="trukapp">
                 <div className="img">
-                    <img src="https://static1.squarespace.com/static/55d64111e4b0a862eed6a419/55d80b75e4b0c9ab9657c9c8/62186795c1b2863807ba81d8/1645808539405/unsplash-image-3jG-UM8IZ40.jpg?format=1500w" width="900px" height="870px" />
+                    <img src="https://static1.squarespace.com/static/55d64111e4b0a862eed6a419/55d80b75e4b0c9ab9657c9c8/62186795c1b2863807ba81d8/1645808539405/unsplash-image-3jG-UM8IZ40.jpg?format=1500w" width="700px" height="680px" />
                 </div>
 
                 <div className="container">
@@ -60,7 +60,7 @@ const LoginForm = (props) => {
                             <form style={{ textAlign: 'center', fontSize: '30px' }}>
                                 <div className="field">
                                     <div>
-                                        <label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <label style={{marginLeft:'70px'}}>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <input
                                             type="email"
                                             value={email}
@@ -104,7 +104,7 @@ const LoginForm = (props) => {
 
                                 </div>
                                 <div >
-                                    <Button className="button" style={{ backgroundColor: '#F58E26' }} onClick={(e) => handleSubmit(e)}>Login now</Button>
+                                    <Button className="button" style={{ backgroundColor: '#F58E26', marginLeft:'70px' }} onClick={(e) => handleSubmit(e)}>Login now</Button>
                                 </div>
 
                             </form>

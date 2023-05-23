@@ -155,12 +155,13 @@
 /* .Nav.Link{
   color: #fff;
 } */
-.topnav{
+/* .topnav{
   background-color: #F58E26;
-  /* height: 80px; */
-  /* margin-left: 63px; */
+  height: 80px;
+  margin-left: 63px;
   display: flex;
-}
+  width: 100%;
+} */
 
 .page{
   text-align: center;
@@ -168,9 +169,17 @@
   margin-left: 50px;
   
 }
+ div{
+  text-align: left;
+ }
 
 .topnav{
   background-color: #F58E26;
   height: 90px;
+  width: 100%;
   /* margin-left: 63px; */
+}
+
+.card :hover{
+  border-color: blue;
 }

@@ -3,10 +3,10 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 // Be sure to include styles at some point, probably during your bootstraping
 
 // import './sidenav.css'
-import { Icon } from '@iconify/react';
+import { Icon } from '@iconify/react';  //icons are import from iconify react website and install
 import { useNavigate } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { CgProfile } from 'react-icons/cg';
+import { CgProfile } from 'react-icons/cg'; //cgprofile is import from
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -34,11 +34,11 @@ function MySidenav() {
         <div>
             <div className='topnav'>
 
-                <Nav style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Nav style={{ display: 'flex', justifyContent: 'space-between', }}>
                     <div>
                         <NavItem style={{ marginTop: '10px' }} >
-                            <span style={{ fontSize: '40px', marginTop: '20px', marginLeft: '20px' }}>
-                                <img src='ellipse truk logo.png' style={{ width: '60px', marginTop: '10px', fontSize: '50px' }} />
+                            <span style={{ fontSize: '40px',  marginLeft: '20px' }}>
+                                <img src='ellipse truk logo.png' style={{ width: '50px', fontSize: '40px' }} />
                                 TrukApp
                             </span>
                         </NavItem>
@@ -48,7 +48,7 @@ function MySidenav() {
                         <div>
 
                             <Button variant="primary" onClick={handleShow} style={{ backgroundColor:'#F58E26', border:'none'}}>
-                                <CgProfile style={{ fontSize: '59.34px', marginTop: '10px', color: '#fff' }} />
+                                <CgProfile style={{ fontSize: '59.34px', marginTop: '10px', color: '#fff', }} />
                             </Button>
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
@@ -85,9 +85,9 @@ function MySidenav() {
 
             </div>
 
-            <div className='side'>
-                <SideNav style={{ backgroundColor: '#F58E26', marginTop: '90px' }}
-
+            <div className='side'> 
+                <SideNav style={{ backgroundColor: '#F58E26', marginTop: '90px', height:'100vh' }}
+// sidenav is import from @trendmicro/react-sidenav first install the trendmicro sidenav
                     onSelect={(selected) => {
                         // Add your code here
                         console.log(selected);
@@ -161,7 +161,7 @@ function MySidenav() {
                         <NavItem style={{ marginBottom:'10px' }} eventKey="communications">
                             <NavIcon>
                                 {/* <i className="fa fa-fw fa-home"  /> */}
-                                <Icon icon="fluent:communication-16-regular" style={{ fontSize: '30px', color: 'white' }} />
+                                <Icon icon="fluent:communication-16-regular" style={{ fontSize: '30px', color: 'white' }}/>
                             </NavIcon>
                             <NavText style={{ fontSize: '20px' }}>
                                 <b>Communications</b>
