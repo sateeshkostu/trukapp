@@ -16,11 +16,16 @@ import Support from './pages/Support';
 import LoginForm from './comonents/LoginForm';
 import Maybeshownavbar from './comonents/Maybeshownavbar/Maybeshownavbar';
 import Privateroute from './comonents/Privateroute';
+// import Privateroute from './comonents/Privateroute';
 
 
 function App() {
 
   const isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'))
+
+  let auth = {'token':false} //when we are in the login page due to taking false ,
+  //we given by a different page path page is not route
+  //incase of we take true page is routed
 
 
   return (
@@ -29,18 +34,22 @@ function App() {
       <BrowserRouter>
         {/* { isLoggedIn ? <MySidenav /> : null} */}
         <Maybeshownavbar>
-        <MySidenav /> 
+          <MySidenav />
         </Maybeshownavbar>
         <Routes>
-          <Route path='/login' element={<LoginForm />  } />
-          <Route path="/" element={<Dashboard />} />
-          <Privateroute path="/postedloads" component={Postedloads } />
-          <Route path="/cancledbookings" element={<Cancledbookings />} />
-          <Route path="/trukcompines" element={<Trukcompines />} />
-          <Route path="/completeddeals" element={<Completedloads />} />
-          <Route path="/referrals" element={<Referrals />} />
-          <Route path="/communications" element={<Communications />} />
-          <Route path="/support" element={<Support />} />
+          <Route element={<Privateroute auth={auth}/>}>  
+          {/* auth={auth} taking the props and use in various places */}
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/postedloads" component={<Postedloads />} />
+            <Route path="/cancledbookings" element={<Cancledbookings />} />
+            <Route path="/trukcompines" element={<Trukcompines />} />
+            <Route path="/completeddeals" element={<Completedloads />} />
+            <Route path="/referrals" element={<Referrals />} />
+            <Route path="/communications" element={<Communications />} />
+            <Route path="/support" element={<Support />} />
+          </Route>
+          <Route path='/login' element={<LoginForm auth={auth} />} />        
+
         </Routes>
       </BrowserRouter>
 

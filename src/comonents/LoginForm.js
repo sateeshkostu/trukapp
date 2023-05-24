@@ -31,6 +31,7 @@ const LoginForm = (props) => {
                 alert('login succesfull')
                 localStorage.setItem('adminEmail', JSON.stringify(email));
                 localStorage.setItem('isLoggedIn', true)
+                props.auth.token = true   //here we take the true page is navigate to dashboard page
                 navigate('/');
 
             })
